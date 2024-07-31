@@ -183,7 +183,7 @@ local function set_keybindings()
 				c.fullscreen = not c.fullscreen
 				c:raise()
 			end, { description = "toggle fullscreen", group = "client" }),
-			awful.key({ modkey }, "w", function(c)
+			awful.key({ modkey }, "q", function(c)
 				c:kill()
 			end, { description = "close", group = "client" }),
 			awful.key(
