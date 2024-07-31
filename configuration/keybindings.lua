@@ -85,7 +85,7 @@ local function set_keybindings()
 		awful.key({ modkey, "Control" }, "l", function()
 			awful.tag.incmwfact(0.05)
 		end, { description = "increase master width factor", group = "layout" }),
-		awful.key({ modkey("Control") }, "h", function()
+		awful.key({ modkey, "Control" }, "h", function()
 			awful.tag.incmwfact(-0.05)
 		end, { description = "decrease master width factor", group = "layout" }),
 		awful.key({ modkey, "Shift" }, "h", function()
