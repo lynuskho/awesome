@@ -103,9 +103,6 @@ local function set_keybindings()
 		awful.key({ modkey }, " ", function()
 			awful.layout.inc(1)
 		end, { description = "select next", group = "layout" }),
-		awful.key({ modkey, "Shift" }, "Tab", function()
-			awful.layout.inc(-1)
-		end, { description = "select previous", group = "layout" }),
 	})
 
 	-- @DOC_NUMBER_KEYBINDINGS@
