@@ -12,13 +12,19 @@ local function set_keybindings()
 			awesome.emit_signal("dashboard::toggle")
 		end, { description = "toggle the dashboard", group = "launcher " }),
 		awful.key({ modkey }, "c", function()
-			awesome.emit_signal("screenshot-center::toggle")
+			-- awesome.emit_signal("screenshot-center::toggle")
+			awful.spawn.with_shell("$XDG_CONFIG_HOME/rofi/applets/bin/screenshot.sh")
 		end, { description = "toggle the screenshots center", group = "launcher" }),
 		awful.key({ modkey }, "n", function()
 			awesome.emit_signal("notifcenter::toggle")
 		end, { description = "toggle the notifcenter", group = "launcher" }),
+		-- app launcher
 		awful.key({ "Mod1" }, " ", function()
-			awful.spawn("rofi -show drun")
+			awful.spawn.with_shell("$XDG_CONFIG_HOME/rofi/launchers/type-1/launcher.sh")
+		end, { description = "Open rofi", group = "launcher" }),
+		-- emoji selector
+		awful.key({ "Mod1" }, ".", function()
+			awful.spawn("rofimoji")
 		end, { description = "Open rofi", group = "launcher" }),
 	})
 
